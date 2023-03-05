@@ -69,6 +69,9 @@ export const Signup=()=>{
 
     return (
         <div className="signup">
+                <div className="pic">
+        {user.uid?<img class="pro-pic" src={user.photoURL} alt="" />:<i></i>}
+</div>
             <form className='signup-form' onSubmit={handleSubmit(formSubmit)}>
                 <p>Note : The display name you choose will be your name in certificates</p>
                 <input type="text" placeholder='Display name' {...register("display_name")}/>
